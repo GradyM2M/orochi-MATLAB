@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.4.2-27-gc3b3358  Build Version: 1.4.6891.25992
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="orochi">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.012822 1.4447E-06 0.069507"
+        rpy="0 0 0" />
+      <mass
+        value="5.4764" />
+      <inertia
+        ixx="0.024256"
+        ixy="8.7181E-08"
+        ixz="0.00067664"
+        iyy="0.030835"
+        iyz="-1.7098E-07"
+        izz="0.03348" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Empty_Link1">
+    <inertial>
+      <origin
+        xyz="0.013991 -0.023809 0.13621"
+        rpy="0 0 0" />
+      <mass
+        value="5.027" />
+      <inertia
+        ixx="0.050907"
+        ixy="0.00024736"
+        ixz="-0.0043361"
+        iyy="0.050634"
+        iyz="0.0073776"
+        izz="0.016541" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="join1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.1555"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link2">
+    <inertial>
+      <origin
+        xyz="-0.090405 0.0001283 -0.034379"
+        rpy="0 0 0" />
+      <mass
+        value="4.8258" />
+      <inertia
+        ixx="0.014308"
+        ixy="-5.2212E-05"
+        ixz="0.010129"
+        iyy="0.054914"
+        iyz="2.7585E-05"
+        izz="0.053476" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="fixed">
+    <origin
+      xyz="0 0 0.2425"
+      rpy="1.0396 1.5708 0" />
+    <parent
+      link="Empty_Link1" />
+    <child
+      link="Empty_Link2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link3">
+    <inertial>
+      <origin
+        xyz="0.013716 -0.023352 0.13494"
+        rpy="0 0 0" />
+      <mass
+        value="3.4657" />
+      <inertia
+        ixx="0.030336"
+        ixy="0.00065705"
+        ixz="-0.0030182"
+        iyy="0.029603"
+        iyz="0.0051381"
+        izz="0.0085136" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="fixed">
+    <origin
+      xyz="-0.2645 0 0"
+      rpy="-1.5708 -0.53116 1.5708" />
+    <parent
+      link="Empty_Link2" />
+    <child
+      link="Empty_Link3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link4">
+    <inertial>
+      <origin
+        xyz="-0.10563 -9.1486E-07 -0.025932"
+        rpy="0 0 0" />
+      <mass
+        value="3.6905" />
+      <inertia
+        ixx="0.0091824"
+        ixy="-2.3028E-08"
+        ixz="0.0064332"
+        iyy="0.034999"
+        iyz="-9.1232E-08"
+        izz="0.033362" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="fixed">
+    <origin
+      xyz="0.00025327 -0.00043111 0.2355"
+      rpy="1.0396 1.5708 0" />
+    <parent
+      link="Empty_Link3" />
+    <child
+      link="Empty_Link4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link5">
+    <inertial>
+      <origin
+        xyz="0.0083708 -0.01416 0.088691"
+        rpy="0 0 0" />
+      <mass
+        value="2.2021" />
+      <inertia
+        ixx="0.0078973"
+        ixy="0.00046195"
+        ixz="-0.001112"
+        iyy="0.0073904"
+        iyz="0.0018813"
+        izz="0.0053213" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="fixed">
+    <origin
+      xyz="-0.2495 0 -0.0005"
+      rpy="-1.5708 -0.53116 1.5708" />
+    <parent
+      link="Empty_Link4" />
+    <child
+      link="Empty_Link5" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link6">
+    <inertial>
+      <origin
+        xyz="-0.00058323 3.3834E-05 -0.061101"
+        rpy="0 0 0" />
+      <mass
+        value="1.8079" />
+      <inertia
+        ixx="0.0035005"
+        ixy="1.6024E-05"
+        ixz="0.00022729"
+        iyy="0.004845"
+        iyz="-2.6538E-05"
+        izz="0.0046501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="fixed">
+    <origin
+      xyz="0.030966 -0.052208 0.2505"
+      rpy="1.0396 1.5708 0" />
+    <parent
+      link="Empty_Link5" />
+    <child
+      link="Empty_Link6" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link7">
+    <inertial>
+      <origin
+        xyz="6.2194E-07 8.1316E-08 -0.027493"
+        rpy="0 0 0" />
+      <mass
+        value="2.4716" />
+      <inertia
+        ixx="0.0015183"
+        ixy="-2.2254E-07"
+        ixz="-6.7766E-08"
+        iyy="0.0015182"
+        iyz="3.9105E-08"
+        izz="0.0027275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orochi/meshes/Empty_Link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="continuous">
+    <origin
+      xyz="-0.1259 0 -0.0607"
+      rpy="-1.5708 -0.53116 1.5708" />
+    <parent
+      link="Empty_Link6" />
+    <child
+      link="Empty_Link7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-180"
+      upper="180"
+      effort="100"
+      velocity="1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
