@@ -4,4 +4,4 @@ Orochi七自由度洁净机器人项目，包括工作空间求解、运动学�
 
 ## GUI界面
 
-<img src="https://github.com/GradyM2M/orochi/blob/melodic-devel/img/version_1.png" width="1000">
+<img src="https://github.com/GradyM2M/orochi-MATLAB/blob/MATLAB-R2019b/GUI%E7%95%8C%E9%9D%A2.png" width="1000">
